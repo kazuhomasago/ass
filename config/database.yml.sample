@@ -1,0 +1,22 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+development:
+  <<: *default
+  database: auburn_development
+
+test:
+  <<: *default
+  database: auburn_test
+
+production:
+  <<: *default
+  database: auburn_production
+  username: auburn
+  password: <%= ENV['AUBURN_DATABASE_PASSWORD'] %>
+

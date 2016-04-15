@@ -1,0 +1,21 @@
+!!!
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}/
+    %meta{content: "text/javascript", "http-equiv" => "default-style"}/
+    %meta{content: "text/css", "http-equiv" => "default-style"}/
+    %title
+      = @page_title
+    = stylesheet_link_tag *@stylesheets_media_print, media: 'print', 'data-turbolinks-track' => false
+    = stylesheet_link_tag *@stylesheets, media: 'all', 'data-turbolinks-track' => false if @stylesheets
+    = javascript_include_tag 'application', 'data-turbolinks-track' => false
+    = javascript_include_tag *@javascripts if @javascripts
+    =# /[if lt IE 9] <script type="text/javascript" src="/javascripts/html5shiv.js"></script>
+    =# /[if lt IE 8] <script type="text/javascript" src="/javascripts/selectivizr.js"></script>
+    = csrf_meta_tags
+    //- breadcrumb @breadcrumb if @breadcrumb.present?
+
+  %body{id: @body_id, class: @body_class}
+    //#pannkuzu= breadcrumbs style: :ul, class: nil, current_class: 'non', display_single_fragment: true if @breadcrumb.present?
+    = yield
+
