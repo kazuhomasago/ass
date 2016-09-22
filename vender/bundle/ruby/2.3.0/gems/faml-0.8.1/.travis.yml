@@ -1,0 +1,27 @@
+language: ruby
+sudo: false
+rvm:
+  - 2.1
+  - 2.2
+  - 2.3.0
+  - ruby-head
+gemfile:
+  - gemfiles/rails_4.0.gemfile
+  - gemfiles/rails_4.1.gemfile
+  - gemfiles/rails_4.2.gemfile
+  - gemfiles/rails_edge.gemfile
+branches:
+  only:
+    - master
+before_script:
+  - ruby -e 'puts RbConfig::CONFIG.map { |k, v| "#{k}=#{v}" }.sort'
+after_script:
+  - bundle exec rake benchmark
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+    - gemfile: gemfiles/rails_edge.gemfile
+  exclude:
+    # Rails 5 requires to run on Ruby 2.2.0 or newer.
+    - rvm: 2.1
+      gemfile: gemfiles/rails_edge.gemfile

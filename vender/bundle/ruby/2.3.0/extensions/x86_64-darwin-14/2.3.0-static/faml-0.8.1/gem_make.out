@@ -1,0 +1,17 @@
+current directory: /Users/masago/workspace/ass/feasibility/vender/bundle/ruby/2.3.0/gems/faml-0.8.1/ext/attribute_builder
+/Users/masago/.rbenv/versions/2.3.0/bin/ruby -r ./siteconf20160922-90119-k1f33.rb extconf.rb
+creating Makefile
+
+current directory: /Users/masago/workspace/ass/feasibility/vender/bundle/ruby/2.3.0/gems/faml-0.8.1/ext/attribute_builder
+make "DESTDIR=" clean
+
+current directory: /Users/masago/workspace/ass/feasibility/vender/bundle/ruby/2.3.0/gems/faml-0.8.1/ext/attribute_builder
+make "DESTDIR="
+compiling attribute_builder.cc
+compiling buffer.c
+compiling houdini_html_e.c
+linking shared-object faml/attribute_builder.bundle
+
+current directory: /Users/masago/workspace/ass/feasibility/vender/bundle/ruby/2.3.0/gems/faml-0.8.1/ext/attribute_builder
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 attribute_builder.bundle ./.gem.20160922-90119-10g24ia/faml
