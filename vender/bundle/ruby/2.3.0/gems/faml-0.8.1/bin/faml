@@ -1,4 +1,0 @@
-#!/usr/bin/env ruby
-require 'faml/cli'
-
-Faml::CLI.start(ARGV)
