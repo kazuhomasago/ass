@@ -38,7 +38,7 @@ gem 'whenever', :require => false
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
-  gem 'web-console', '~> 3.0.0'
+#  gem 'web-console', '~> 3.0.0'
   gem 'pry-rails'  # rails console(もしくは、rails c)でirbの代わりにpryを使われる
   gem 'pry-doc'    # methodを表示
   gem 'pry-byebug' # デバッグを実施(Ruby 2.0以降で動作する)
