@@ -319,10 +319,6 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.2)
       execjs (>= 0.3.0, < 3)
-    web-console (3.0.0)
-      activemodel (>= 4.2)
-      debug_inspector
-      railties (>= 4.2)
     whenever (0.9.7)
       chronic (>= 0.6.3)
     woothee (1.5.0)
@@ -375,7 +371,6 @@ DEPENDENCIES
   sqlite3
   squeel
   uglifier (>= 2.7.2)
-  web-console (~> 3.0.0)
   whenever
 
 BUNDLED WITH
